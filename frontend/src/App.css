@@ -1,0 +1,178 @@
+.nav-active{
+  color:blue;
+  transform: scale(1.1);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.right-animation{
+  animation:  6s ease-in 0s infinite slidein;
+}
+.left-animation{
+  animation:  6s ease-in 0s infinite slideright;
+}
+
+.ani-bounce{
+  animation: bounce 4s 0s infinite;
+}
+
+html,body{
+  overflow-x: hidden;
+}
+
+.fixed-pos{
+   position: sticky;
+}
+
+.dropdown::before{
+  content: '';
+  position:absolute;
+  width:10px;
+  height: 10px;
+  left:50px;
+  top:8px;
+  /* transform: rotate(45deg); */
+}
+
+.dropdown1::before{
+  /* content: ''; */
+  position:absolute;
+  width:10px;
+  height: 10px;
+  left:7.7rem;
+  top:0.4rem;
+  /* transform: rotate(45deg); */
+}
+
+.dropdown-menu::before{
+  content: '';
+  position:absolute;
+  width:15px;
+  height:15px;
+  left:110px;
+  top:-9px;
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+.marquee-animate div{
+  animation: marquee 10s 0s infinite linear;
+  position: relative;
+  background:red;
+}
+
+.marquee-animate-state div{
+  animation-play-state: paused;
+}
+
+@keyframes marquee{
+    0%{
+      text-decoration: dashed;
+      transform: translateY(600px);
+    }
+    99%{
+      transform: translateY(-500px);
+    }
+    100%{
+      transform: translateY(-600px);
+    }
+} 
+
+.animate-round{
+  animation: rotating 0.8s linear 0s infinite;
+}
+
+@keyframes rotating {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+  /* 100%{
+    transform: rotate(36deg);
+  } */
+  
+}
+
+@keyframes slideright{
+  0%{
+    left:-60%;
+  }
+  5%,90%{
+    left:0px;
+  }
+  100%{
+    left:-50%;
+  }
+}
+
+
+@keyframes slidein {
+  0%{
+    left:60%;
+  }
+  10%,90%{
+    left:0px;
+  }
+  100%{
+    left:-50%;
+  }
+}
+
+@keyframes bounce {
+  0%{
+    opacity:10%;
+    top:-15px;
+  }
+  20%{
+    opacity: 20%;
+  }
+
+  25%,85%{
+    opacity: 100%;
+    top:0px
+  }
+  95%{
+    opacity: 20%;
+  }
+  100%{
+    opacity: 0%;
+  }
+
+}
+
+.text-animation{
+  animation: textAnimation 5s ease-in 1s infinite reverse;
+  text-shadow: white 1px 4px 10px;
+}
+@keyframes textAnimation {
+  0%{color:gold;
+     opacity: 50%;}
+  10%{opacity:100%}
+  20%{color:red;opacity: 50%;}
+  40%{opacity: 100%;}
+  50%{color: chartreuse;opacity: 40%;}
+  60%{opacity: 90%;}
+  70%{color:cyan ;opacity: 100%;}
+  80%{opacity: 60%;}
+  100%{opacity: 100%;}
+  
+  
+}
+
+/* .Before-style::before{
+  content: " ";
+  position: relative;
+  width: 4px;
+  height:-2px;
+  border-radius: 100%;
+  left: -10px;
+  top: 0;
+  background: red;
+  border: 2px solid #34b7a7;
+} */
+
+.App{
+  text-align: center;
+}

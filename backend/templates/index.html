@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my django project</title>
+    <link rel="stylesheet" href="static/CSS/my-project.css">
+</head>
+<body>
+    <div class="div">
+        <img src="static/images/myimage0.jpg" alt="img" class="myimage"></img>
+        <form action='receiveddata' method='POST' enctype="multipart/form-data" >
+            {% csrf_token %}
+            {% comment %} <label for="">Name:</label>
+            <input type="text" name="'name" class="myform" placeholder="name" />
+            <br />
+            <label for="">password:</label>
+            <input type="password" name="pass" class="myform" placeholder="password">
+            <br />
+            <label for="">Email:</label>
+            <input type="email" name="email" class="myform" placeholder="email"></input>
+            <br /> {% endcomment %}
+            <label for="">title:</label>
+            <input type="text" name="title" class="myform" placeholder="title"></input>
+            <br />
+            <label for="">file:</label>
+            <input type="file" name="audio_file" class="myform" placeholder="audio_file"></input>
+            <br />
+            <button type="submit">submit</button>
+        </form>
+        {% comment %} <audio src="Media/{{x}}" controls></audio> {% endcomment %}
+        {{myfile}}
+    </div>
+</body>
+</html>

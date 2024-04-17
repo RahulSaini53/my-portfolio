@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+
+@layer components{
+
+.list-l2 > li{
+  @apply relative before:absolute before:border-2 before:border-red-600 
+         before:rounded-full before:w-2 before:h-2 before:-left-4 before:top-3
+}
+
+.list-l1 > li{
+  @apply relative before:absolute before:bg-red-600 before:rounded-full before:w-2 before:h-2 before:-left-4 before:top-3
+}
+
+.list-l3 > li{
+  @apply relative before:absolute before:bg-red-600 before:w-2 before:h-2 before:-left-4 before:top-3
+}
+
+}
+
+@tailwind utilities;
+
+@layer base {
+    html {
+      font-family: "Proxima Nova", system-ui, sans-serif;
+    }
+  }
